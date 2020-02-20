@@ -1,41 +1,34 @@
 # README
 
-## stylist_usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|password|string|null: false|
-|nickname|string|null: false|
+|name|string|null: false|add_indexTo
 ### Association
-- has_many :tweets
-- has_many :comments
+- has_many :group
+- has_many :messeage
+- has_many :group_users
 
-## style_tweetsテーブル
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
+|group_name|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
+- has_many :messages
 
-## tagsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-### Association
-- has_many :posts_tags
-- has_many  :posts,  through:  :posts_tags
-
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
+|text|text|image|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |tweet_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :tweet
+- belongs_to :group
 - belongs_to :user
 
 ## groups_usersテーブル
@@ -44,5 +37,5 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :stylist_users
-- belongs_to :user
+- belongs_to :group
+- belongs_to :use
