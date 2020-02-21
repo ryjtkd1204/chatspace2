@@ -12,9 +12,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |string|integer|null: false| 
-master
-
- master
 ### Association
 - has_many :users, throgh: groups_users
 - has_many :messages
