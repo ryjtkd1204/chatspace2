@@ -2,7 +2,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|name|string|null: false,add_indexTo|
+|name|string|null: false ,index: true|
 ### Association
 - has_many :groups, throgh: groups_users
 - has_many :messeages
@@ -11,8 +11,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|string|integer|null: false| 
-
+|name|string|null: false| 
 ### Association
 - has_many :users, throgh: groups_users
 - has_many :messages
@@ -21,9 +20,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|
-|image|text|
-
+|text|text||
+|image|string||
 |group_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 ### Association
