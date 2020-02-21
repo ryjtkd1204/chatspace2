@@ -14,6 +14,9 @@
 |name|integer|null: false, foreign_key: true| 
 =======
 |name|string|null: false, foreign_key: true| 
+=======
+|string|integer|null: false| 
+master
 
  master
 ### Association
