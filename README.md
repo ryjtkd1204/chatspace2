@@ -15,10 +15,10 @@
 |------|----|-------|
 |image|text||
 |text|text||
-|user_id|integer|null: false, foreign_key: true|
+|integer|null: false, foreign_key: true|
 |group_name|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
+- has_many :users, throgh: groups_users
 - has_many :messages
 - has_many :group_users
 
@@ -26,7 +26,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|image|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 |tweet_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
