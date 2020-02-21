@@ -11,10 +11,6 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: true| 
-=======
-|name|string|null: false, foreign_key: true| 
-=======
 |string|integer|null: false| 
 master
 
@@ -27,13 +23,8 @@ master
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|text|null: false|
-=======
 |text|text|
 |image|text|
-
- master
 |group_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 ### Association
