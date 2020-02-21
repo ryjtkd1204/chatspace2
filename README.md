@@ -11,7 +11,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|string|integer|null: false| 
+|name|integer|null: false, foreign_key: true| 
 ### Association
 - has_many :users, throgh: groups_users
 - has_many :messages
@@ -20,8 +20,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|image|
-|string|
+|text|text|null: false|
+|image|text|null: false|
 |group_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 ### Association
