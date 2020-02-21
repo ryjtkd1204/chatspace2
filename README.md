@@ -1,5 +1,3 @@
-# README
-
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -22,8 +20,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|image|null: false|
-|image|
+|text|text|null: false|
+|image|text|null: false|
 |group_id|reference|null: false, foreign_key: true|
 |user_id|reference|null: false, foreign_key: true|
 ### Association
