@@ -10,11 +10,10 @@
 - has_many :messeages
 - has_many :group_users
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|
-- |group_name|integer|null: false, foreign_key: true| 
+|name|integer|null: false, foreign_key: true| 
 ### Association
 - has_many :users, throgh: groups_users
 - has_many :messages
