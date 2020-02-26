@@ -1,0 +1,21 @@
+.chat-main
+  .main-header
+    .header-leftbox
+      %h2.current-group tech
+      %ul.member-list Member:gdt
+      %a{:href => "#"}
+    .edit-btn Edit
+  .messages
+    .messages__data
+      .message__data__up-info
+      .message__data__up-info__talk gdt
+      .message__data__up-info__data 2020/02/25(tue) 10:42:39
+    .message__text hallo
+
+  .form
+    .input-box
+      %input.input-box__text{:placeholder => "type a message", :type => "text"}/
+      %label{class: "input-box__image"}
+        = icon('fas', 'image')
+      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
+      
