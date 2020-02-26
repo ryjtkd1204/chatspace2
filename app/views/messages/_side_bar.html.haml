@@ -4,14 +4,16 @@
       %p.side-header__box__user-name 
         gdt
       %ul.side-header__box__menu
-        %li.side-header__box__menu__new-group
-          %a{:href => "/groups/new"}
-            %i.fa.fa-edit
-        %li.side-header__box__menu__edit-user
-          %a{:href => "/users/15198/edit"}
-            %i.fa.fa-cog 
+        = link_to new_group_path do
+          %li.side-header__box__menu__new-group
+            %a{:href => "/groups/new"}
+              %i.fa.fa-edit
+          %li.side-header__box__menu__edit-user
+            %a{:href => "/users/15198/edit"}
+              %i.fa.fa-cog 
   .groups
     %p.groups__name
       techcamp
     %p.groups__message
       まだメッセージがありません
+       
