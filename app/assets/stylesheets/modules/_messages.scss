@@ -56,17 +56,25 @@
     padding: 20px 20px 0;
     overflow: scroll;
     margin-bottom: 40px;
-    &__name {
-      color: #fafafa;
-      font-size: 15px;
-      margin-bottom: 5px;
+    .group {
+      a {
+        color: white
+      }
+      &__name {
+        color: white;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__message {
+        color: white;
+        font-size: 11px;
+      
+      }
     }
-    &__message {
-      color: white;
-      font-size: 11px;
-    }
-}
- 
+  }
+
+    
+
 .chat-main {
   width: calc(100% - 300px);
   background-color: #fafafa;
@@ -138,9 +146,16 @@
 }
 .form {
   height: 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
-    box-sizing: border-box;
+  padding: 20px 40px;
+  background-color: #ddd;
+  box-sizing: border-box;
+    &__message {
+      height: 50px;
+      width: 80%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+  }
 }
 
 a {
@@ -157,50 +172,48 @@ a {
     right: 40px;
     cursor: pointer;
 }
-.new-message {
+.newmessage {
   display: flex;
   box-sizing: border-box;
 }
 
-.input-box {
+.form__mask {
     position: relative;
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    &__text {
-     height: 50px;
-     width: 280%;
-     padding: 0 40px 0 10px;
-     color: #434a54;
-     border-style: none;
     }
-     &__image{
-      cursor: pointer;
-      font-size:1.3rem;
-      position: absolute; 
-      top: 10px;
-      right: 150px; 
-      .fas{
-      color: black;
-      }
-    }
-   }
-
-.submit-btn {
-  width: 100px;
-    height: 50px;
-    padding: 0 30px;
-    margin-left: 15px;
-    background-color: #38aef0;
-    color: white;
+  .form__mask__image {
     cursor: pointer;
-    float:right;
-}
+    font-size:1.3rem;
+    position: absolute; 
+    right: 200px; 
+    .fas{
+    color: black;
 
+    }
+    }
+    .form__mask__hidden {
+      display: none
+    }
+      
+    .form__mask__submit {
+       width: 100px;
+       height: 50px;
+       padding: 0 30px;
+       margin-left: 15px;
+       background-color: #38aef0;
+       color: white;
+       cursor: pointer;
+       float:right;
+       top: 10px;
+     }
+   
 
 i{
   color: #fff;
 }
+
 
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.

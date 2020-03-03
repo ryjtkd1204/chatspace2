@@ -12,8 +12,10 @@
             %a{:href => "/users/15198/edit"}
               %i.fa.fa-cog 
   .groups
-    %p.groups__name
-      techcamp
-    %p.groups__message
-      まだメッセージがありません
-       
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            = group.show_last_message
