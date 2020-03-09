@@ -66,3 +66,11 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem "font-awesome-sass"
 gem 'carrierwave'
 gem 'mini_magick'
+
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
