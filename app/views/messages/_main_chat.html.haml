@@ -1,8 +1,7 @@
 .chat-main
   .main-header
     .header-leftbox
-      %h2.current-group tech
-      %ul.member-list Member:gdt
+      = @group.name
       %a{:href => "#"}
     .edit-btn 
       = link_to "Edit",edit_group_path(@group) 
@@ -10,9 +9,9 @@
     = render @messages
     .messages__data
       .message__data__up-info
-      .message__data__up-info__talk gdt
-      .message__data__up-info__data 2020/02/25(tue) 10:42:39
-    .message__text hallo
+      .message__data__up-info__talk 
+      .message__data__up-info__data 
+    .message__text 
 
   .form
     = form_for [@group, @message],remote:true do |f|

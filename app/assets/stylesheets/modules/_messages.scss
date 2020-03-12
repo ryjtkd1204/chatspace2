@@ -56,7 +56,6 @@
     padding: 20px 20px 0;
     box-sizing: border-box;
     overflow: scroll;
-    margin-bottom: 40px;
     .group {
       a {
         color: white
@@ -77,14 +76,14 @@
     
 
 .chat-main {
-  width: calc(100% - 300px);
+  width: calc(100vw - 300px);
   background-color: #fafafa;
   box-sizing: border-box;
+  float: left;
 }
 
 .main-header {
   height: 100px;
-  width: 100vw;
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
   display: flex;
