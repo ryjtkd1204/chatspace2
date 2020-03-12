@@ -1,5 +1,6 @@
 $(function(){ 
   var buildHTML = function(message) {
+    console.log(message)
     if (message.content && message.image) {
       //data-idが反映されるようにしている
       var html = `<div class="message" data-message-id=  ${message.id} >
@@ -15,7 +16,7 @@ $(function(){
           <p class="lower-message__content">
             ${message.content} 
           </p>
-          <img src=" message.image " class="lower-message__image" >
+          <img src="${message.image}" class="lower-message__image" >
         </div>
       </div>`
     } else if (message.content) {
@@ -47,7 +48,7 @@ $(function(){
           </div>
         </div>
         <div class="lower-message">
-          <img src=" message.image " class="lower-message__image" >
+          <img src=" ${message.image} " class="lower-message__image" >
         </div>
       </div>`
     };
@@ -73,11 +74,12 @@ $(function(){
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     
    })
- })
+ 
 
    .always(function() {
     $('.form__mask__submit').prop('disabled', false);
    })
+  })
    var reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     var last_message_id = $('.message:last').data("message-id");
