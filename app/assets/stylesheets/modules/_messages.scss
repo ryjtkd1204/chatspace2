@@ -73,8 +73,6 @@
     }
   }
 
-    
-
 .chat-main {
   width: calc(100vw - 300px);
   background-color: #fafafa;
@@ -92,9 +90,20 @@
   justify-content: space-between
   overflow scroll;
 }
-.header-leftbox {
-  margin-top: 20px;
-}
+  .header-leftbox {
+    margin-top: 20px;
+    &__group__name{
+      font-weight: bold;
+      font-size: 20px;
+  }
+ }
+ 
+  .left-header__members{
+    font-size: 12px;
+    color: #434a54;
+    display: flex;
+  }
+
 
 .current-group {
   color: #2f3e51;
@@ -118,32 +127,32 @@
     background-color: #fafafa;
     overflow: scroll;
     box-sizing: border-box;
-    &__data {
-       padding-bottom: 40px;
-       box-sizing: border-box;
-       &__up-info {
-         color: #434a54;
-         font-size: 16px;
-         font-weight: bold;
-       }
-       &__up-info__talk {
-         color: #434a54;
-         font-size: 16px;
-         font-weight: bold;
-       }
-       &__up-info__data {
-         color: #999999;
-         font-size: 12px;
-         margin-left: 10px;
-       }
-    }
-  
-    &__text {
+
+  .upper-message {
+    display: flex;
+    &__use-rname {
       color: #434a54;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: bold;
       margin-bottom: 10px;
     }
-}
+    &__date {
+      color: #999999;
+      font-size: 5px;
+      display: flex;
+    }
+  }
+  .lower-message {
+    display: flex;
+      &__content {
+       color: #434a54;
+       font-size: 14px;
+       margin-bottom: 10px;
+       padding: 25px;
+       }
+      }
+    }
+
 .form {
   height: 90px;
   padding: 20px 40px;
@@ -160,7 +169,7 @@
 
 a {
   text-decoration: none;
-  color: #333333;
+  color: #38aef0;
 }
 
 .edit-btn {
@@ -209,12 +218,10 @@ a {
        bottom: 50px
      }
    
-
+    
 i{
   color: #fff;
 }
-
-
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/

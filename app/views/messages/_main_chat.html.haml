@@ -1,17 +1,17 @@
 .chat-main
   .main-header
     .header-leftbox
+      .header-leftbox__group__name
       = @group.name
-      %a{:href => "#"}
+      .left-header__members
+        Member：
+        %ul
+          -@group.users.each do |user|
+            =user.name
     .edit-btn 
       = link_to "Edit",edit_group_path(@group) 
   .messages
     = render @messages
-    .messages__data
-      .message__data__up-info
-      .message__data__up-info__talk 
-      .message__data__up-info__data 
-    .message__text 
 
   .form
     = form_for [@group, @message],remote:true do |f|
