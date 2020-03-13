@@ -29,7 +29,9 @@ $(function() {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
     $(`#${userId}`).append(html);
   }
+
   $("#user-search-field").on("keyup", function() {
+
     let input = $("#user-search-field").val();
     $.ajax({
       type: "GET",
@@ -39,8 +41,10 @@ $(function() {
     })
       .done(function(users) {
         $("#user-search-result").empty();
+        
 
         if (users.length !== 0) {
+          console.log(users.length)
           users.forEach(function(user) {
             addUser(user);
           });
