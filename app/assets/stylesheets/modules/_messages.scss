@@ -138,18 +138,20 @@
     }
     &__date {
       color: #999999;
-      font-size: 5px;
+      font-size: 10px;
       display: flex;
       margin-left: 10px;
     }
   }
   .lower-message {
     display: flex;
+    left: 10px;
       &__content {
        color: #434a54;
        font-size: 14px;
-       margin-bottom: 10px;
-       padding: 25px;
+       margin-bottom: 5px;
+       margin: 25px 0px;
+       float: left;
        }
       }
     }
